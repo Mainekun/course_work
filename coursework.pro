@@ -21,3 +21,6 @@ HEADERS += \
     vectorinputdialog.h
 
 TARGET = main.cpp
+
+DISTFILES += \
+    .gitignore
