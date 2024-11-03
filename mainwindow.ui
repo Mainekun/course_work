@@ -26,6 +26,9 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="placeholderText">
+     <string>Здесь вводится выражение</string>
+    </property>
    </widget>
    <widget class="QPlainTextEdit" name="vectorIO">
     <property name="geometry">
@@ -48,6 +51,9 @@
       <width>331</width>
       <height>61</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Здесь выводится результат</string>
     </property>
    </widget>
    <widget class="QPushButton" name="addVectorBtn">
@@ -119,7 +125,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

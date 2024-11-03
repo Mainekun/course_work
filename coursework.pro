@@ -7,9 +7,8 @@ QT += core gui widgets
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    vectordata.cpp \
-    vectorinputdialog.cpp \
-    vectormodel.cpp
+    vecexceptions.cpp \
+    vectorinputdialog.cpp
 
 FORMS += \
     mainwindow.ui \
@@ -18,9 +17,7 @@ FORMS += \
 HEADERS += \
     geometryvectorlib.h \
     mainwindow.h \
-    vectordata.h \
-    vectorexceptions.h \
-    vectorinputdialog.h \
-    vectormodel.h
+    vecexceptions.h \
+    vectorinputdialog.h
 
 TARGET = main.cpp
