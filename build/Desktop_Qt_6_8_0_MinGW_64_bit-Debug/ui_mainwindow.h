@@ -59,10 +59,10 @@ public:
         addVectorBtn->setGeometry(QRect(10, 10, 91, 18));
         removeBtn = new QPushButton(centralwidget);
         removeBtn->setObjectName("removeBtn");
-        removeBtn->setGeometry(QRect(10, 40, 91, 18));
+        removeBtn->setGeometry(QRect(10, 70, 91, 18));
         editBtn = new QPushButton(centralwidget);
         editBtn->setObjectName("editBtn");
-        editBtn->setGeometry(QRect(10, 70, 91, 18));
+        editBtn->setGeometry(QRect(10, 40, 91, 18));
         solveBtn = new QPushButton(centralwidget);
         solveBtn->setObjectName("solveBtn");
         solveBtn->setGeometry(QRect(10, 100, 91, 18));

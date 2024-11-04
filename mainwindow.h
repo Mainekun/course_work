@@ -15,6 +15,11 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_addVectorBtn_released();
+
+    void on_editBtn_released();
+
 private:
     Ui::MainWindow *ui;
 };

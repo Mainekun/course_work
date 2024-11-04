@@ -16,6 +16,7 @@
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -25,6 +26,7 @@ public:
     QDialogButtonBox *buttonBox;
     QPlainTextEdit *vectorinput;
     QLabel *status;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *VectorInputDialog)
     {
@@ -35,13 +37,20 @@ public:
         buttonBox->setObjectName("buttonBox");
         buttonBox->setGeometry(QRect(10, 70, 341, 32));
         buttonBox->setOrientation(Qt::Orientation::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok);
+        buttonBox->setStandardButtons(QDialogButtonBox::StandardButton::Ok);
+        buttonBox->setCenterButtons(false);
         vectorinput = new QPlainTextEdit(VectorInputDialog);
         vectorinput->setObjectName("vectorinput");
         vectorinput->setGeometry(QRect(10, 10, 341, 41));
         status = new QLabel(VectorInputDialog);
         status->setObjectName("status");
-        status->setGeometry(QRect(10, 60, 341, 16));
+        status->setGeometry(QRect(10, 55, 341, 16));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Comic Sans MS")});
+        status->setFont(font);
+        pushButton = new QPushButton(VectorInputDialog);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(9, 74, 80, 24));
 
         retranslateUi(VectorInputDialog);
         QObject::connect(buttonBox, &QDialogButtonBox::accepted, VectorInputDialog, qOverload<>(&QDialog::accept));
@@ -53,7 +62,8 @@ public:
     void retranslateUi(QDialog *VectorInputDialog)
     {
         VectorInputDialog->setWindowTitle(QCoreApplication::translate("VectorInputDialog", "Dialog", nullptr));
-        status->setText(QCoreApplication::translate("VectorInputDialog", "TextLabel", nullptr));
+        status->setText(QString());
+        pushButton->setText(QCoreApplication::translate("VectorInputDialog", "Check", nullptr));
     } // retranslateUi
 
 };
